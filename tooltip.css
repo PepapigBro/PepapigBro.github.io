@@ -1,0 +1,74 @@
+.invisible {
+  visibility: hidden;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.vertical-pointer{
+  stroke: #696969; 
+  width: 1px;
+  z-index: 2;    
+}
+
+.tooltip{
+  height: 180px;
+  padding: 5px 30px 5px 30px;
+  background: white;
+  border: 1px solid grey;
+  position: absolute;
+  transition: left .1s linear;
+  top: 0; 
+  z-index: 1;
+}
+
+.night-mode .tooltip{
+  background: #4e4e4e;
+}
+
+.tooltip table{
+  min-width: 250px;
+}
+
+.tooltip td{
+  overflow: hidden;
+}
+
+.tooltip-header span{
+  font-family: Sans, Arial;
+  font-size: 2.5rem; 
+  color: black;
+  font-weight: bold;
+}
+
+.night-mode .tooltip-header span{
+  color: #eaeaea;
+}
+
+.tooltip-value{
+  font-family: Sans, Arial;
+  font-size: 2.5rem;
+  font-weight: bold;
+  display: block;
+}
+
+.tooltip-name{
+  font-family: Sans, Arial;
+  font-size: 2.5rem;
+  font-weight: medium;
+  display: block;
+}
+
+.tooltip td{
+  text-align: center;
+}
+
+.tooltip tr{
+  height: 70px;
+}
+
+.tooltip-body td{
+  width: 30px;
+  overflow: hidden;
+}

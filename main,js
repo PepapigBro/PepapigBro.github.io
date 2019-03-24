@@ -1,0 +1,54 @@
+(function(){    
+  loadData().then(json=>{
+    let dataHeap = JSON.parse(json);
+    
+    let chartsData = [];   
+
+    for (var data of dataHeap){
+      let columnX = data.columns.find(c => data.types[c[0]]=="x");
+      let xLabels = columnX.map(x=> {
+        var date = new Date(x);
+        return monthNames[date.getMonth()] + " " +date.getDate();
+      });
+      let fullDates = columnX.map(x=> {
+        var date = new Date(x);
+        return dayNames[date.getDay()] +", " + monthNames[date.getMonth()] + " " +date.getDate();
+      });
+      
+      
+      //console.log(xLabels)
+      let columnsY = data.columns.filter(c => data.types[c[0]]=="line");
+       
+      let curves = [];      
+      let yMaxArr = []
+      for (var colY of columnsY){  
+        
+        var curveName = colY[0];
+        let yMax = Math.max.apply(null, colY.slice(1))
+        yMaxArr.push(yMax);
+        var curve = {points: [], 
+                     color: data.colors[curveName], 
+                     name: data.names[curveName],
+                     yMax: yMax,
+                     isVisible: true
+                    }  
+        for(var i=1; i<columnX.length; i++){ 
+          curve.points.push(new Point(i-1, colY[i], xLabels[i], fullDates[i]));
+        }
+        curves[curveName] = curve;
+      }
+      
+      chartsData.push({curves: curves, 
+                       xMax: columnX.length-2,
+                       yMax: Math.max.apply(null, yMaxArr)
+                      })
+    }  
+    
+    
+    var chartA = new ResponsiveChart("chart-a", chartsData[0]);
+    var chartB = new ResponsiveChart("chart-b", chartsData[1]);
+    var chartC = new ResponsiveChart("chart-c", chartsData[2]);
+    var chartD = new ResponsiveChart("chart-d", chartsData[3]);
+    var chartE = new ResponsiveChart("chart-e", chartsData[4]);
+    });  
+  }())

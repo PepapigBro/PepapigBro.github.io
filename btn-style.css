@@ -1,0 +1,76 @@
+  .switchers-container{
+    width: 100%;    
+  }
+  
+  .switcher{
+    display: inline-block;
+    margin: 20px 15px 0 0;
+  }
+
+  .outer{
+    border: 3px solid gray;
+    height: 100px;
+    border-radius: 50px;
+    vertical-align: middle;
+    padding: 0 38px 0 8px;
+    width: auto;    
+  }
+
+  .circle{    
+    height: 62px;    
+    width: 62px;
+    background: gray;
+    border-radius: 62px;
+    margin-right: 13px;
+    text-align: center;
+    vertical-align: middle;
+    display: table;    
+  }
+
+  .pressed{
+    width: 23px;
+    height: 8px;
+    border-left: 7px solid white;
+    border-bottom: 7px solid white; 
+    transform: rotate(-45deg);
+    display: inline-block;
+    transition: .2s;
+    margin-top: 16px;
+  }
+  
+  .non-pressed{
+    width: 38px;
+    height: 38px;    
+    background: white;
+    border: 1px solid black;
+    border-radius: 38px;
+    vertical-align: middle;    
+    transition: .2s;
+    display: table-cell;    
+  }
+  
+  .switcher-area{
+    width: 100%;    
+  }
+  
+  .night-mode-container{
+    vertical-align: top;
+  }
+  
+  .night-mode-container .switcher{
+    float: right;    
+    margin-right: 0;
+  }
+  
+  .night-mode{
+    color: white !important;
+    background: black;    
+  }
+
+  .night-mode .non-pressed{
+    background: black;
+  }
+  
+  .switcher-label{
+    font-size: 2.3rem;
+  }

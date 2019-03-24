@@ -1,0 +1,52 @@
+  .slideArea svg{
+     height: 100%;
+     width: calc(100% - 0px);
+   }
+   
+   .absolute{
+       position: absolute;
+   }
+   
+  .slider{
+    opacity: 0.5;
+    background: transparent;
+    border: 3px solid #72a3a1;
+    border-left: 20px solid #72a3a1;
+    border-right: 20px solid #72a3a1;
+    height: 100%;
+    width: auto;        
+    display: table-cell;
+  }
+  
+  .night-mode .slider{
+    border-color: white;
+  }   
+  
+  .right-side, 
+  .left-side{
+      height: 50px;       
+      background: #eaf9fa;          
+      opacity: 0.6;  
+      display: table-cell;
+  }
+
+  .right-side{
+    width: 80%;    
+  }
+
+  .night-mode .right-side, 
+  .night-mode .left-side{            
+      background: #555555;
+  }
+    
+  .slider-wrapper{
+    display: table;
+    width: 100%;
+    height: 100%;
+    margin-left: 0;
+  }
+
+ .chart{
+    width: 100%;
+    margin-top: 40px;
+ }

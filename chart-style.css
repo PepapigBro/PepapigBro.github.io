@@ -1,0 +1,40 @@
+  .chart-container{
+    background: white;    
+  }
+  
+  .header-text{
+    font-family: Sans, Arial;
+    font-size: 4rem; 
+    color: black;
+  }
+  
+  .night-mode .header-text{
+    color: #e3e3e3;
+  }
+  
+  .header-free-space{
+    height: 5%;
+  }
+
+  path{
+    stroke: #0d0909;
+    stroke-width: 4px;      
+  }
+    
+  .output{
+    position: relative;
+    overflow: hidden;  
+    height: 55%;
+  }
+     
+  .svg{
+    height: 100%;
+    width: 100%;
+  }
+    
+  .slideArea{
+    height: 10%;
+    width: 100%;
+    position: relative;
+    padding-left: 0;
+  }

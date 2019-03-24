@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+ <html style="overflow-x: hidden;">
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link href="y_axis_style.css" rel="stylesheet" type="text/css">
+  <link href="x-axis-style.css" rel="stylesheet" type="text/css">
+  <link href="tooltip.css" rel="stylesheet" type="text/css">
+  <link href="main.css" rel="stylesheet" type="text/css">
+  <link href="slider-style.css" rel="stylesheet" type="text/css">
+  <link href="chart-style.css" rel="stylesheet" type="text/css">
+  <link href="btn-style.css" rel="stylesheet" type="text/css">
+  
+
+  <div id="chart-a" class="chart"></div>
+  <div id="chart-b" class="chart"></div>
+  <div id="chart-c" class="chart"></div>
+  <div id="chart-d" class="chart"></div>
+  <div id="chart-e" class="chart"></div>
+
+  <template id="chart-template">
+    <div class="chart-container">
+      <span class="header-text">Followers</span>
+      <div class="header-free-space"></div>
+      <div class="output">
+         <svg class="svg" preserveAspectRatio="none" >
+             <g class="mainFrame">
+              
+               <line class="vertical-pointer invisible"  y1="0" vector-effect="non-scaling-stroke"/>
+                
+             </g>
+         </svg>
+         
+         <div class="tooltip invisible">
+           <table>
+             <tr class="tooltip-header">
+               <td colspan="3">
+                  <span>Sat, Feb 24</span>
+               </td>
+             </tr>
+             <tr class="tooltip-body">
+                   <!-- autogenerates by js -->  
+               <td class="tooltip-cell">
+                 <span class="tooltip-value">142</span>
+                 <span class="tooltip-name">y0</span>
+               </td>                       
+             </tr>
+           </table>
+         </div>
+     </div>
+      
+     <div class="x-axis-area">
+         <svg preserveAspectRatio="none" viewBox="0 0 600 50">
+              <g class="xAxisFrame"></g>
+         </svg> 
+      </div>
+      
+      <div class="slideArea">
+         <svg class="absolute" preserveAspectRatio="none">         
+               <g class="slideFrame"></g>   
+         </svg> 
+         
+         
+         
+         <div class="slider-wrapper">
+           <div class="left-side"></div>
+           <div class="slider"></div>     
+           <div class="right-side"></div>  
+         </div>
+     </div>
+     
+     <table class="switcher-area">
+          <td>
+              <div class="switchers-container"></div>
+          </td>
+          <td class="night-mode-container">
+              <div class="switcher">
+                <table class="outer">
+                  <td>
+                      <div class="circle">
+                        <div class="non-pressed">          
+                        </div>
+                      </div>
+                  </td>
+                  <td>
+                      <div class="switcher-label">Night mode</div>
+                  </td>
+                </table>  
+              </div> 
+          </td>
+      </table>  
+     
+  
+    </div>  
+  </template>
+  <template id="dynamic-y-axis-template">
+    <div class = "container">
+      <div class="divider"> 
+           <div class="digit animated">
+             <div class="text">
+               <span class="real-text">-</span>         
+               <hr/>
+             </div> 
+           </div>
+           
+           <div class="digit-current animated">
+             <div class="text">
+              <span class="real-text">-</span> 
+               <hr/>
+             </div>        
+           </div>      
+     </div>
+    </div>
+  </template>
+
+  <script src="others-utils.js"></script>
+  <script src="responsive-chart.js"></script>
+  <script src="slider.js"></script>
+  <script src="tooltip.js"></script>
+  <script src="y-axis.js"></script>
+  <script src="main,js"></script>
+
+</html>

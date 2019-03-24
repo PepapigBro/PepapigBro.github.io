@@ -1,0 +1,22 @@
+.x-axis-area{
+   height: 80px;
+   width: 100%;
+}
+
+.x-axis-area svg{
+   height: 100%;
+   width: 100%;
+}
+
+.x-axis-area text{
+  font-family: Sans, Arial;
+  font-size: 1.5rem;    
+  -webkit-transition: fill-opacity .8s ease;
+	-moz-transition: fill-opacity .8s ease;
+	-o-transition: fill-opacity .8s ease;
+	transition: fill-opacity .8s ease;  
+}
+
+.svg-null-opacity{
+  fill-opacity: 0;
+}
